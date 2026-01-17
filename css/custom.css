@@ -26,7 +26,7 @@ button.btn.btn-danger.d-flex.ms-auto {
     -o-transition: 0.3s ease-in-out background;
 }
 button.btn.btn-danger:hover {
-    background: #000 !important;
+    background: green !important;
 }
 a.nav-link {
     font-size: 20px;
