@@ -19,6 +19,15 @@ button.btn.btn-danger.d-flex.ms-auto {
     font-weight: 600;
     padding: 16px 42px;
     background: #E90024;
+    transition: 0.3s ease-in-out background;
+    -webkit-transition: 0.3s ease-in-out background;
+    -moz-transition: 0.3s ease-in-out background;
+    -ms-transition: 0.3s ease-in-out background;
+    -o-transition: 0.3s ease-in-out background;
+}
+button.btn.btn-danger:hover {
+    background: #d40020e8 !important;
+    color: #e7e5e5 !important;
 }
 a.nav-link {
     font-size: 20px;
