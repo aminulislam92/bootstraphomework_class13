@@ -8,13 +8,12 @@
     navbar
 ==================== */
 .d-flex.nav_custIcon {
-    align-items: center;
     gap: 20px;
 }
 .d-flex.nav_custIcon i {
     font-size: 24px;
 }
-button.btn.btn-danger.d-flex.ms-auto {
+button.btn.btn-danger {
     font-size: 20px;
     font-weight: 600;
     padding: 16px 42px;
