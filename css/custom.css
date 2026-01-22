@@ -191,18 +191,37 @@ h1 span {
   background: var(--secondary);
   padding: 150px 0;
 }
-
-
-
-
+/*===========================
+    how insta section
+=========================== */
+#howInsta{
+  padding: 150px 0;
+}
+.how_inst_nav li a{
+  font-size: var(--p-text);
+  color: var(--p-color);
+}
+.howBtn {
+  color: var(--primary);
+  background: var(--secondary) !important;
+}
+.btn.btn-danger.howBtn:hover {
+  background: var(--primary) !important;
+  color: var(--secondary) !important;
+}
+/*===========================
+    review section
+=========================== */
 
 
 /*===========================
-    video play section
+    FAQ section
 =========================== */
-/*===========================
-    video play section
-=========================== */
+#faq_part{
+  padding: 150px 0;
+}
+
+
 /*===========================
     footer section
 =========================== */
@@ -231,6 +250,23 @@ footer{
 .footer-links li {
   margin-bottom: 8px;
 }
+
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.social-icons a{
+  font-size: 18px;
+  margin-right: 10px;
+  color: #0d6efd;
+}
 .social-circle {
   width: 36px;
   height: 36px;
@@ -245,24 +281,8 @@ footer{
   transition: 0.3s;
 }
 
-.footer-links a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #6c757d;
-}
-
-.footer-links a:hover {
-  color: #000;
-}
-
-.social-icons a {
-  font-size: 18px;
-  margin-right: 10px;
-  color: #0d6efd;
-}
-
-.social-icons a:hover {
-  color: #dc3545;
+.social-icons a:hover .social-circle {
+  background: #dc3545;
 }
 
 
