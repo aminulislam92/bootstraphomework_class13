@@ -1,70 +1,277 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+:root {
+  --primary: #e90024;
+  --secondary: #f4f4f4;
+  --heading-color: #1e1e1e;
+  --p-color: #787878;
+  --link-text-color: #fff;
+  --heading-h1: 60px;
+  --heading-h2: 45px;
+  --heading-h3: 25px;
+  --heading-h4: 20px;
+  --p-text: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+/* ---font size--- */
+h1 {
+  font-size: var(--heading-h1);
+  line-height: 85px;
+  font-weight: 900;
+}
+h2 {
+  font-size: var(--heading-h2);
+}
+h3 {
+  font-size: var(--heading-h3);
+}
+h4 {
+  font-size: var(--heading-h4);
+}
+h1,h2,h3,h4{
+    color: var(--heading-color);
+}
+p {
+  font-size: var(--p-text);
+  color: var(--p-color);
 }
 /*====================
     navbar
 ==================== */
+nav{position: absolute;}
 .d-flex.nav_custIcon {
-    gap: 20px;
+  gap: 20px;
 }
 .d-flex.nav_custIcon i {
-    font-size: 24px;
+  font-size: 24px;
 }
 button.btn.btn-danger {
-    font-size: 20px;
-    font-weight: 600;
-    padding: 16px 42px;
-    background: #E90024;
-    transition: 0.3s ease-in-out background;
-    -webkit-transition: 0.3s ease-in-out background;
-    -moz-transition: 0.3s ease-in-out background;
-    -ms-transition: 0.3s ease-in-out background;
-    -o-transition: 0.3s ease-in-out background;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px 42px;
+  background: var(--primary);
+  transition: 0.3s ease-in-out background;
+  -webkit-transition: 0.3s ease-in-out background;
+  -moz-transition: 0.3s ease-in-out background;
+  -ms-transition: 0.3s ease-in-out background;
+  -o-transition: 0.3s ease-in-out background;
 }
 button.btn.btn-danger:hover {
-    background: #4B4B4B !important;
+  background: var(--secondary) !important;
+  color: var(--heading-color);
 }
 a.nav-link {
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
 }
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show,
-.nav-link:focus, .nav-link:hover {
-    color: #E90024;
+.nav-link:focus,
+.nav-link:hover {
+  color: #e90024;
 }
-.navbar-toggler:focus, .btn-close:focus {
-    box-shadow: none;
-    outline: none;
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
 }
-@media (min-width: 991px) {
+
+/* ===========================
+    hero section
+=========================== */
+#hero {
+  padding-top: 50px;
+  padding-bottom: 150px;
+}
+h1 span {
+  color: var(--primary);
+}
+.hero_image{
+  position: relative;
+}
+.hero_design_effect {
+    position: absolute;
+    top: 24%;
+    right: 2%;
+    z-index: -1;
+}
+/*===========================
+    counter section
+=========================== */
+.Counter_container {
+  background: var(--secondary);
+  border-radius: 30px;
+  padding: 95px 112px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  position: relative;
+}
+.counter_design{
+  position: absolute;
+  left: -18px;
+  bottom: -18px;
+  z-index: -1;
+
+}
+/*===========================
+    insta work section
+=========================== */
+#insta_work{
+  padding: 150px 0px;
+}
+.insta_card{
+  max-width: 370px;
+  padding: 75px 30px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+.insta_icon{
+  width: 80px;
+  height: auto;
+  margin-bottom: 43px;
+}
+.card_body h3{
+  margin-bottom: 30px;
+}
+/*===========================
+    video play section
+=========================== */
+#play_part{
+  padding-bottom: 150px;
+}
+.pulse{
+    width: 100px;
+    height: 100px;
+    background: #e73d5c79;
+    border-radius: 50%;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    animation: animate-pulse 3s linear infinite;
+    cursor: pointer
+}
+.pulse img{
+  transform: translate(5px);
+  -webkit-transform: translate(5px);
+  -moz-transform: translate(5px);
+  -ms-transform: translate(5px);
+  -o-transform: translate(5px);
+}
+@keyframes animate-pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255, 74, 74, 0.7),  0 0 0 0 rgba(255, 86, 74, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 0 rgba(255, 80, 74, 0.7);
+    }
+    80%{
+        box-shadow: 0 0 0 50px rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,109,74,0.0),  0 0 0 30px rgba(255,109,74,0);
+    }
     
-    .nav-link::before{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%);
-        width: 0;
-        height: 2px;
-        background: #E90024;
-        transition: 0.3s ease-in-out;
-        -webkit-transform: translate(-50%);
-        -moz-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-        -o-transform: translate(-50%);
-        -webkit-transition: 0.3s ease-in-out;
-        -moz-transition: 0.3s ease-in-out;
-        -ms-transition: 0.3s ease-in-out;
-        -o-transition: 0.3s ease-in-out;
-        visibility: hidden;
-    }
-    .nav-link:hover::before, .nav-link.active::before{
-        visibility: visible;
-        width: 100%;
-    }
 }
+/*===========================
+    video play section
+=========================== */
+#chooseInsta{
+  background: var(--secondary);
+  padding: 150px 0;
+}
+
+
+
+
+
+
+/*===========================
+    video play section
+=========================== */
+/*===========================
+    video play section
+=========================== */
+/*===========================
+    footer section
+=========================== */
+footer{
+  background: var(--secondary);
+}
+.footer-logo {
+  max-width: 140px;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+.social-circle {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #0a66c2; /* LinkedIn color */
+  color: #fff;
+  text-decoration: none;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.social-icons a {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #0d6efd;
+}
+
+.social-icons a:hover {
+  color: #dc3545;
+}
+
+
+
+
+
+
+/* .accordion-button:focus,
+.collapsed:focus {
+  box-shadow: none;
+  outline: none;
+} */
